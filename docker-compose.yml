@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  backend:
+    build: .
+    container_name: restapi_back
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - DATABASE_URL=postgresql+psycopg2://myuser:myuserpassword@postgres:5432/studentsapis
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+
+  postgres:
+    image: postgres:16
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_DB: studentsapis  # Bazaning nomi
+      POSTGRES_USER: myuser  # Foydalanuvchi nomi
+      POSTGRES_PASSWORD: myuserpassword  # Foydalanuvchi paroli
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+volumes:
+  postgres_data:
+
+networks:
+  app-network:
+    driver: bridge

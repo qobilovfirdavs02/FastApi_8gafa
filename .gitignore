@@ -1,0 +1,40 @@
+# Python ignore files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
+
+# Virtual environment
+venv/
+.env
+*.env
+
+# Logs and debug
+logs/
+*.log
+*.out
+*.err
+debug.log
+
+# Database
+*.sqlite3
+*.db
+migrations/
+
+# Docker
+*.tar
+*.bak
+docker-compose.override.yml
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Ignore compiled files
+*.egg-info/
+dist/
+build/

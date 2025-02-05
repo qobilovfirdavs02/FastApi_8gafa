@@ -57,10 +57,5 @@ def calculate_perimeter(a: float):
 def root():
     return {"Salom": "guruhi 403b"}
 
-# 1->>>> pip install fastapi 
-# 2->>>> pip install uvicorn[standart]
-# 3->>>> pip install pymysql]
-# 4->>>> pip install slqalchemy]
 
-#https://codevoweb.com/build-a-crud-app-with-fastapi-and-sqlalchemy/
 
