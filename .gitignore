@@ -1,40 +1,21 @@
-# Python ignore files
+# Python cache files
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.swp
-*.swo
 
 # Virtual environment
 venv/
-.env
-*.env
+env/
 
-# Logs and debug
-logs/
+# IDE/editor files
+*.vscode/
+*.idea/
+*.DS_Store
+
+# Logs and database files
 *.log
-*.out
-*.err
-debug.log
-
-# Database
 *.sqlite3
-*.db
-migrations/
 
-# Docker
-*.tar
-*.bak
-docker-compose.override.yml
-
-# VS Code
-.vscode/
-
-# PyCharm
-.idea/
-
-# Ignore compiled files
-*.egg-info/
-dist/
-build/
+# Environment variables
+.env
